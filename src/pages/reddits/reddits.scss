@@ -1,0 +1,36 @@
+@for $i from 1 through 5 {
+    .mt-#{$i} {
+        margin-top: $i * 0.5rem !important;
+      }
+}
+@for $i from 1 through 5 {
+    .mr-#{$i} {
+        margin-right: $i * 0.5rem !important;
+      }
+}
+@for $i from 1 through 5 {
+    .mb-#{$i} {
+        margin-bottom: $i * 0.5rem !important;
+      }
+}
+@for $i from 1 through 5 {
+    .ml-#{$i} {
+        margin-left: $i * 0.5rem !important;
+      }
+}
+@for $i from 1 through 5 {
+    .mx-#{$i} {
+        margin-left: $i * 0.5rem !important;
+        margin-right: $i * 0.5rem !important;
+      }
+}
+@for $i from 1 through 5 {
+    .my-#{$i} {
+        margin-top: $i * 0.5rem !important;
+        margin-bottom: $i * 0.5rem !important;
+      }
+}
+
+.w-100 {
+    width: 100%;
+}

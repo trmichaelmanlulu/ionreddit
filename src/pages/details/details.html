@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        {{ item.title }}
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-card>
+          <img src="{{ item.preview.images[0].source.url }}"/>
+          <ion-card-content>
+            <ion-grid no-padding>
+              <!-- Row -->
+              <ion-row no-padding>
+                <ion-card-title no-padding class="my-1 w-100">{{ item.title }}</ion-card-title>
+                <p><strong>Author:</strong> {{ item.author }}</p>
+              </ion-row>
+
+              <!-- Row -->
+              <ion-row no-padding class="mt-3">
+                <ion-col class="col-12">
+                    <a ion-button class="w-100" target="_blank" href="http://reddit.com/{{ item.permalink }}">View on reddit</a>
+                </ion-col>
+              </ion-row>
+
+              <!-- Row -->
+              <ion-row no-padding class="mt-3 pt-2 seperator-top">
+
+                <!-- Col -->
+                <ion-col text-left>
+                  <button clear="" color="danger" icon-start ion-button small class="disable-hover button button-ios button-clear button-clear-ios button-small button-small-ios button-clear-ios-danger"><span class="button-inner">
+                    <ion-icon name="thumbs-up" role="img" class="icon icon-ios ios-thumbs-up" aria-label="likes"></ion-icon>
+                    {{ item.score }}
+                  </span><div class="button-effect"></div></button>
+                </ion-col>
+
+                <!-- Col -->
+                <ion-col text-center>
+                  <button clear="" color="danger" icon-start="" ion-button="" small="" class="disable-hover button button-ios button-clear button-clear-ios button-small button-small-ios button-clear-ios-danger"><span class="button-inner">
+                    <ion-icon name="chatboxes" role="img" class="icon icon-ios ios-chatboxes" aria-label="comments"></ion-icon>
+                    {{ item.num_comments }}
+                  </span><div class="button-effect"></div></button>
+                </ion-col>
+
+                <!-- Col -->
+                <ion-col text-right>
+                  <button clear="" color="danger" icon-start="" ion-button="" small="" class="disable-hover button button-ios button-clear button-clear-ios button-small button-small-ios button-clear-ios-danger"><span class="button-inner">
+                    <ion-icon name="share-alt" role="img" class="icon icon-ios ion-ios-share-alt" aria-label="share alt"></ion-icon>
+                    Share
+                  </span><div class="button-effect"></div></button>
+                </ion-col>
+
+              </ion-row>
+
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+  </ion-content>
+  
